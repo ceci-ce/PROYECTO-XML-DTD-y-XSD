@@ -1,0 +1,31 @@
+<!ELEMENT catalogo (libros+, revistas?, usuarios+, prestamos?)> <!--orcid? fecha_fin?-->
+<!ATTLIST catalogo fecha CDATA #REQUIRED>
+
+<!--LIBROS-->
+<!ELEMENT libros (libro+)>
+<!ELEMENT libro (titulo, anio, autores, etiquetas?)>
+<!ATTLIST libro id ID #REQUIRED categoria CDATA #REQUIRED isbn CDATA #REQUIRED paginas CDATA #IMPLIED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (nombre, orcid?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT orcid (#PCDATA)>
+<!ELEMENT etiquetas (etiqueta*)>
+<!ELEMENT etiqueta (#PCDATA)>
+
+<!--REVISTAS-->
+<!ELEMENT revistas (revista+)>
+<!ELEMENT revista (titulo, anio)>
+<!ATTLIST revista id ID #REQUIRED area CDATA #IMPLIED issn CDATA #REQUIRED numero CDATA #IMPLIED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+
+
+
+
+
+
+
+<!--USUARIOS-->
+<!--PRESTAMOS-->

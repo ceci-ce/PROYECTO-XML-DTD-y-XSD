@@ -28,7 +28,7 @@
 <!--PRESTAMOS-->
 <!ELEMENT prestamos (prestamo*)>
 <!ELEMENT prestamo (fecha_inicio, fecha_fin?, estado)>
-<!ATTLIST prestamo id ID #REQUIRED itemRef CDATA #REQUIRED usuarioRef CDATA #REQUIRED>
+<!ATTLIST prestamo id ID #REQUIRED itemRef IDREF #REQUIRED usuarioRef IDREF #REQUIRED>
 <!ELEMENT fecha_inicio (#PCDATA)>
 <!ELEMENT fecha_fin (#PCDATA)>
 <!ELEMENT estado (#PCDATA)>

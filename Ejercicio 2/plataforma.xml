@@ -42,6 +42,8 @@
         </alumno>
     </alumnos>
     <matriculas>
+        <matricula id="M2" alumnoRef="0001" cursoRef="4"></matricula>
+        <matricula id="M8" alumnoRef="0009" cursoRef="7"></matricula>
     </matriculas>
     <evaluaciones>
 

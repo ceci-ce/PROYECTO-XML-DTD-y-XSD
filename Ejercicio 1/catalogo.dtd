@@ -1,4 +1,4 @@
-<!ELEMENT catalogo (libros+, revistas?, usuarios+, prestamos?)> <!--orcid? fecha_fin?-->
+<!ELEMENT catalogo (libros+, revistas?, usuarios+, prestamos?)> <!--fecha_fin?-->
 <!ATTLIST catalogo fecha CDATA #REQUIRED>
 
 <!--LIBROS-->
@@ -21,11 +21,7 @@
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT anio (#PCDATA)>
 
-
-
-
-
-
-
 <!--USUARIOS-->
-<!--PRESTAMOS-->
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (nombre, email)>
+<!ATTLIST usuario id ID #REQUIRED tipo CDATA #IMPLIED>

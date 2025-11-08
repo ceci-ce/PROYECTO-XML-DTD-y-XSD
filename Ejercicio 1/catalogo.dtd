@@ -23,6 +23,7 @@
 <!ELEMENT usuarios (usuario+)>
 <!ELEMENT usuario (nombre, email)>
 <!ATTLIST usuario id ID #REQUIRED tipo CDATA #IMPLIED>
+<!ELEMENT email (#PCDATA)>
 
 <!--PRESTAMOS-->
 <!ELEMENT prestamos (prestamo*)>

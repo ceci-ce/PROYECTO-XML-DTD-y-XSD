@@ -27,7 +27,19 @@
         </curso>
     </cursos>
     <alumnos>
-        
+        <alumno id="A1">
+            <nombre>Lucía Fernández</nombre>
+            <email>lucia.fernandez@example.com</email>
+            <telefono>612345678</telefono>
+        </alumno>
+        <alumno id="A2" nif="1500515L">
+            <nombre>Javier Morales</nombre>
+            <email>javier.morales@example.com</email>
+        </alumno>
+        <alumno id="A3">
+            <nombre>María López</nombre>
+            <email>maria.lopez@example.com</email>
+        </alumno>
     </alumnos>
     <matriculas>
     </matriculas>

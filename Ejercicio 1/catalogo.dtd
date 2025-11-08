@@ -18,8 +18,6 @@
 <!ELEMENT revistas (revista+)>
 <!ELEMENT revista (titulo, anio)>
 <!ATTLIST revista id ID #REQUIRED area CDATA #IMPLIED issn CDATA #REQUIRED numero CDATA #IMPLIED>
-<!ELEMENT titulo (#PCDATA)>
-<!ELEMENT anio (#PCDATA)>
 
 <!--USUARIOS-->
 <!ELEMENT usuarios (usuario+)>

@@ -1,1 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plataforma SYSTEM "plataforma.dtd">
+<plataforma fecha_publicacion="2013-04-21">
+
+    <cursos>
+        <curso id="C02">
+            <titulo>Desarrollo de Aplicaciones Web</titulo>
+            <nivel>Avanzado</nivel>
+            <modalidad>Online</modalidad>
+            <horas>120</horas>
+            <modulos>
+                <modulo clave="DAW01">
+                    <nombre>Diseño Frontend con HTML, CSS y JavaScript</nombre>
+                    <horas>50</horas>
+                </modulo>
+                <modulo clave="DAW03">
+                    <nombre>Bases de Datos y SQL</nombre>
+                    <horas>90</horas>
+                </modulo>
+            </modulos>
+        </curso>    
+        <curso id="C04">
+            <titulo>Diseño y Gestion de Moda</titulo>
+            <nivel>Avanzado</nivel>
+            <modalidad>Presencial</modalidad>
+            <horas>100</horas>
+        </curso>
+    </cursos>
+    <alumnos>
+        
+    </alumnos>
+    <matriculas>
+    </matriculas>
+    <evaluaciones>
+
+    </evaluaciones>
+
+</plataforma>

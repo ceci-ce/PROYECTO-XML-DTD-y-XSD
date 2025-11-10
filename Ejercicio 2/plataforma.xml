@@ -42,17 +42,25 @@
         </alumno>
     </alumnos>
     <matriculas>
-        <matricula id="M2" alumnoRef="L0001" cursoRef="P4">
+        <matricula id="M2" alumnoRef="A1" cursoRef="C02">
             <fecha_alta>2024-09-15</fecha_alta>
             <estado>Activa</estado>
         </matricula>
-        <matricula id="M8" alumnoRef="L0009" cursoRef="P7">
+        <matricula id="M8" alumnoRef="A2" cursoRef="C04">
             <fecha_alta>2024-10-03</fecha_alta>
             <estado>Finalizada</estado>
         </matricula>
     </matriculas>
     <evaluaciones>
-
+        <evaluacion id="N211" matriculaRef="M2">
+            <instrumento>Examen final</instrumento>
+            <convocatoria>Junio 2024</convocatoria>
+            <nota>8.5</nota>
+        </evaluacion>
+        <evaluacion id="N324" matriculaRef="M8">
+            <instrumento>Proyecto práctico</instrumento>
+            <convocatoria>Septiembre 2024</convocatoria>
+            <nota>7.2</nota>
+        </evaluacion>
     </evaluaciones>
-
 </plataforma>

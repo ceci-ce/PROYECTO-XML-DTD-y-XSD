@@ -42,8 +42,14 @@
         </alumno>
     </alumnos>
     <matriculas>
-        <matricula id="M2" alumnoRef="0001" cursoRef="4"></matricula>
-        <matricula id="M8" alumnoRef="0009" cursoRef="7"></matricula>
+        <matricula id="M2" alumnoRef="L0001" cursoRef="P4">
+            <fecha_alta>2024-09-15</fecha_alta>
+            <estado>Activa</estado>
+        </matricula>
+        <matricula id="M8" alumnoRef="L0009" cursoRef="P7">
+            <fecha_alta>2024-10-03</fecha_alta>
+            <estado>Finalizada</estado>
+        </matricula>
     </matriculas>
     <evaluaciones>
 

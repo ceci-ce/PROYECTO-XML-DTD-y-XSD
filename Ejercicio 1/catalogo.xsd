@@ -32,6 +32,14 @@
         <xs:attribute name="paginas" type="xs:integer" use="optional"/>
     </xs:complexType>
     </xs:element>
+    <xs:element name="autores">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="orcid" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
    
 
 </xs:schema>

@@ -3,10 +3,10 @@
     <xs:element name="catalogo">
         <xs:complexType>
             <xs:sequence>
-              <xs:element name="libros" type="xs:string"/>
-              <xs:element name="revistas" type="xs:integer"/>
-              <xs:element name="usuarios" type="xs:string"/>
-              <xs:element name="prestamos" type="xs:integer"/>
+              <xs:element ref="libros"></xs:element>
+              <xs:element ref="revistas"></xs:element>
+              <xs:element ref="usuarios"></xs:element>
+              <xs:element ref="prestamos"></xs:element>
             </xs:sequence>
 
         </xs:complexType>

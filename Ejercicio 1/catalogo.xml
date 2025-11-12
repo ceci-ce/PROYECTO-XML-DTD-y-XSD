@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE catalogo SYSTEM "catalogo.dtd">
+<!-- DOCTYPE catalogo SYSTEM "catalogo.dtd"-->
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalogo.xsd">
 <catalogo fecha="2025-10-04">
 
   <libros>

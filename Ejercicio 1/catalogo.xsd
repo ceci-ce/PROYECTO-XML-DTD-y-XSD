@@ -21,8 +21,8 @@
     <xs:element name="libro"/>
     <xs:complexType>
         <xs:sequence>
-            <xs:element ref="titulo"/>
-            <xs:element ref="anio"/>
+            <xs:element ref="titulo" type="xs:string"/>
+            <xs:element ref="anio" type="xs:integer"/>
             <xs:element ref="autores"/>
             <xs:element ref="etiquetas" minOccurs="0"/>
         </xs:sequence>
@@ -31,4 +31,7 @@
         <xs:attribute name="isbn" type="xs:string" use="required"/>
         <xs:attribute name="paginas" type="xs:integer" use="optional"/>
     </xs:complexType>
+    </xs:element>
+   
+
 </xs:schema>

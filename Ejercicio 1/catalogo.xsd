@@ -3,13 +3,28 @@
     <xs:element name="catalogo">
         <xs:complexType>
             <xs:sequence>
-              <xs:element ref="libros"></xs:element>
-              <xs:element ref="revistas"></xs:element>
-              <xs:element ref="usuarios"></xs:element>
-              <xs:element ref="prestamos"></xs:element>
+              <xs:element ref="libros"/>
+              <xs:element ref="revistas"/>
+              <xs:element ref="usuarios"/>
+              <xs:element ref="prestamos"/>
             </xs:sequence>
-
+            <xs:attribute name="fecha" type="xs:date" use="required"/>
         </xs:complexType>
-        
     </xs:element>
+    <xs:element name="libros">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="libro" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="libro"/>
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="titulo"/>
+            <xs:element ref="anio"/>
+            <xs:element ref="autores"/>
+            <xs:element ref="etiquetas" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

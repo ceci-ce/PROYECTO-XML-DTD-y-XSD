@@ -104,6 +104,29 @@
             <xs:pattern value="[a-z]+\.[a-z]+@[a-z]+\.[a-z]{2,4}"/>
         </xs:restriction>
     </xs:simpleType>
-   
-
+    <xs:element name="prestamos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prestamo" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="prestamo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fecha_inicio" type="xs:date"/>
+                <xs:element name="fecha_fin" type="xs:date" minOccurs="0"/>
+                <xs:element name="estado" type="estadoPrestamo"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="itemRef" type="xs:IDREF" use="required"/>
+            <xs:attribute name="usuarioRef" type="xs:IDREF" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="estadoPrestamo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="devuelto"/>
+            <xs:enumeration value="en_curso"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

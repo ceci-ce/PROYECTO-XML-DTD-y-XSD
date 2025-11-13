@@ -54,6 +54,25 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:element name="revistas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="revista" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="revista">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="anio" type="xs:integer"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="area" type="xs:string" use="optional"/>
+            <xs:attribute name="issn" type="xs:string" use="required"/>
+            <xs:attribute name="numero" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
    
 
 </xs:schema>

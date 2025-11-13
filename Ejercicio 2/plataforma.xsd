@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="plataforma">
-        
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cursos"/>
+                <xs:element ref="alumnos"/>
+                <xs:element ref="matriculas"/>
+                <xs:element ref="evaluaciones"/>
+            </xs:sequence>
+            <xs:attribute name="fecha_publicacion" type="xs:date" use="required"/>
+        </xs:complexType>
     </xs:element>
+        <xs:element name="cursos">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="curso" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="curso">
+            <xs:complexType>
+                <xs:sequence>
+                        <xs:element name="titulo" type="xs:string"/>
+                        <xs:element name="nivel" type="nivelCurso"/>
+                        <xs:element name="modalidad" type="modalidadCurso"/>
+                        <xs:element name="horas" type="horasCurso"/>
+                        <xs:element ref="modulos" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:ID" use="required"/>
+                <xs:attribute name="codigo" type="xs:string" use="optional"/>
+            </xs:complexType>
+        </xs:element>
+        <xs:simpleType name="nivelCurso">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Basico"/>
+                <xs:enumeration value="Intermedio"/>
+                <xs:enumeration value="Avanzado"/>
+            </xs:restriction>
+        </xs:simpleType>     
+        <xs:simpleType name="modalidadCurso">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Online"/>
+                <xs:enumeration value="Presencial"/>
+            </xs:restriction>
+        </xs:simpleType>     
+        <xs:simpleType name="horasCurso">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="100"/>
+                <xs:maxInclusive value="160"/>
+            </xs:restriction>
+        </xs:simpleType> 
+
 </xs:schema>

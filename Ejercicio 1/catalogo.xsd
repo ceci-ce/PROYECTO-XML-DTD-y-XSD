@@ -35,6 +35,13 @@
     <xs:element name="autores">
         <xs:complexType>
             <xs:sequence>
+                <xs:element ref="autor" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="autor">
+        <xs:complexType>
+            <xs:sequence>
                 <xs:element name="nombre" type="xs:string"/>
                 <xs:element name="orcid" type="xs:string" minOccurs="0"/>
             </xs:sequence>

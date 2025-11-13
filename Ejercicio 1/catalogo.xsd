@@ -97,11 +97,13 @@
                 <xs:element name="nombre" type="xs:string"/>
                 <xs:element name="email" type="emailUsuario"/>
             </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="tipo" type="xs:string" use="optional"/>     
         </xs:complexType>
     </xs:element>
     <xs:simpleType name="emailUsuario">
         <xs:restriction base="xs:string">
-            <xs:pattern value="[a-z]+\.[a-z]+@[a-z]+\.[a-z]{2,4}"/>
+            <xs:pattern value="[a-z]+(\.[a-z]+)?@[a-z]+\.[a-z]{2,4}"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:element name="prestamos">

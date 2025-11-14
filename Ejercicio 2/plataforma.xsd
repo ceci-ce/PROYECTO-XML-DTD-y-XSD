@@ -108,4 +108,10 @@
             </xs:complexType>
         </xs:complexType>
     </xs:element>
+    <xs:simpleType name="estadoMatricula">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Activa"/>
+            <xs:enumeration value="Finalizada"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>

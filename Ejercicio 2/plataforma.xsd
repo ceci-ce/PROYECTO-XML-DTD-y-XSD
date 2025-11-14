@@ -25,7 +25,7 @@
                         <xs:element name="nivel" type="nivelCurso"/>
                         <xs:element name="modalidad" type="modalidadCurso"/>
                         <xs:element name="horas" type="horasCurso"/>
-                        <xs:element ref="modulos" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element ref="modulos" minOccurs="0"/>
                 </xs:sequence>
                 <xs:attribute name="id" type="xs:ID" use="required"/>
                 <xs:attribute name="codigo" type="xs:string" use="optional"/>
@@ -50,5 +50,20 @@
                 <xs:maxInclusive value="160"/>
             </xs:restriction>
         </xs:simpleType> 
-
+        <xs:element name="modulos">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="modulo" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="modulo">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="nombre" type="xs:string"/>
+                    <xs:element name="horas" type="xs:integer"/>
+                </xs:sequence>
+                <xs:attribute name="clave" type="xs:string" use="optional"/>
+            </xs:complexType>
+        </xs:element>
 </xs:schema>

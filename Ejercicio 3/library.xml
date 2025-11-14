@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- DOCTYPE catalogo SYSTEM "library.dtd" -->
-<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="library.xsd">
-<library>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="library.xsd">
+
+    <book>
+        <title>Zaha Hadid: Complete Works</title>
+        <author>Patrik Schumacher</author>
+        <year>2013</year>
+        <publisher>Rizzoli</publisher>
+        <pages>672</pages>
+    </book>
+    <book>
+        <title>Zaha Hadid Architects: Redefining Architecture and Design</title>
+        <author>Zaha Hadid Architects</author>
+        <year>2021</year>
+        <publisher>Lars Müller Publishers</publisher>
+        <pages>480</pages>
+    </book>
+    <book>
+        <title>The Future of Architecture in 100 Buildings</title>
+        <author>Marc Kushner</author>
+        <year>2015</year>
+        <publisher>TED Books</publisher>
+        <pages>176</pages>
+    </book>
+    <book>
+        <title>The Fashion Book</title>
+        <author>Phaidon Editors</author>
+        <year>2020</year>
+        <publisher>Phaidon Press</publisher>
+        <pages>592</pages>
+    </book>
     
-</library>  
+</library> 

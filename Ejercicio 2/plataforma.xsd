@@ -11,82 +11,101 @@
             <xs:attribute name="fecha_publicacion" type="xs:date" use="required"/>
         </xs:complexType>
     </xs:element>
-        <xs:element name="cursos">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element ref="curso" maxOccurs="unbounded"/>
-                </xs:sequence>
-            </xs:complexType>
-        </xs:element>
-        <xs:element name="curso">
-            <xs:complexType>
-                <xs:sequence>
-                        <xs:element name="titulo" type="xs:string"/>
-                        <xs:element name="nivel" type="nivelCurso"/>
-                        <xs:element name="modalidad" type="modalidadCurso"/>
-                        <xs:element name="horas" type="horasCurso"/>
-                        <xs:element ref="modulos" minOccurs="0"/>
-                </xs:sequence>
-                <xs:attribute name="id" type="xs:ID" use="required"/>
-                <xs:attribute name="codigo" type="xs:string" use="optional"/>
-            </xs:complexType>
-        </xs:element>
-        <xs:simpleType name="nivelCurso">
-            <xs:restriction base="xs:string">
-                <xs:enumeration value="Basico"/>
-                <xs:enumeration value="Intermedio"/>
-                <xs:enumeration value="Avanzado"/>
-            </xs:restriction>
-        </xs:simpleType>     
-        <xs:simpleType name="modalidadCurso">
-            <xs:restriction base="xs:string">
-                <xs:enumeration value="Online"/>
-                <xs:enumeration value="Presencial"/>
-            </xs:restriction>
-        </xs:simpleType>     
-        <xs:simpleType name="horasCurso">
-            <xs:restriction base="xs:integer">
-                <xs:minInclusive value="100"/>
-                <xs:maxInclusive value="160"/>
-            </xs:restriction>
-        </xs:simpleType> 
-        <xs:element name="modulos">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element ref="modulo" maxOccurs="unbounded"/>
-                </xs:sequence>
-            </xs:complexType>
-        </xs:element>
-        <xs:element name="modulo">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element name="nombre" type="xs:string"/>
-                    <xs:element name="horas" type="xs:integer"/>
-                </xs:sequence>
-                <xs:attribute name="clave" type="xs:string" use="optional"/>
-            </xs:complexType>
-        </xs:element>
-        <xs:element name="alumnos">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element ref="alumno" maxOccurs="unbounded"/>
-                </xs:sequence>
-            </xs:complexType>
-        </xs:element>
-        <xs:element name="alumno">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element name="nombre" type="xs:string"/>
-                    <xs:element name="email" type="emailAlumno"/>
-                    <xs:element name="telefono" type="xs:string" minOccurs="0"/>
-                </xs:sequence>
-                <xs:attribute name="id" type="xs:ID" use="required"/>
-                <xs:attribute name="nif" type="xs:string" use="optional"/>
-            </xs:complexType>
-        </xs:element>
-        <xs:simpleType name="emailAlumno">
+    <xs:element name="cursos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="curso" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="curso">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="nivel" type="nivelCurso"/>
+                <xs:element name="modalidad" type="modalidadCurso"/>
+                <xs:element name="horas" type="horasCurso"/>
+                <xs:element ref="modulos" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="codigo" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="nivelCurso">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Basico"/>
+            <xs:enumeration value="Intermedio"/>
+            <xs:enumeration value="Avanzado"/>
+        </xs:restriction>
+    </xs:simpleType>     
+    <xs:simpleType name="modalidadCurso">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Online"/>
+            <xs:enumeration value="Presencial"/>
+        </xs:restriction>
+    </xs:simpleType>     
+    <xs:simpleType name="horasCurso">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="100"/>
+            <xs:maxInclusive value="160"/>
+        </xs:restriction>
+    </xs:simpleType> 
+    <xs:element name="modulos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="modulo" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="modulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="horas" type="xs:integer"/>
+            </xs:sequence>
+            <xs:attribute name="clave" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alumnos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="alumno" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alumno">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="email" type="emailAlumno"/>
+                <xs:element name="telefono" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="nif" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="emailAlumno">
         <xs:restriction base="xs:string">
             <xs:pattern value="[a-z]+(\.[a-z]+)?@[a-z]+\.[a-z]{2,4}"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:element name="matriculas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="matricula" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="matricula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fecha_alta" type="xs:date"/>
+                <xs:element name="estado" type="estadoMatricula"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="alumnoRef" type="xs:IDREF" use="required"/>
+            <xs:attribute name="cursoRef" type="xs:IDREF" use="required"/>
+            </xs:complexType>
+        </xs:complexType>
+    </xs:element>
 </xs:schema>

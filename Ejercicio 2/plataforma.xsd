@@ -105,13 +105,36 @@
             <xs:attribute name="id" type="xs:ID" use="required"/>
             <xs:attribute name="alumnoRef" type="xs:IDREF" use="required"/>
             <xs:attribute name="cursoRef" type="xs:IDREF" use="required"/>
-            </xs:complexType>
         </xs:complexType>
     </xs:element>
     <xs:simpleType name="estadoMatricula">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Activa"/>
             <xs:enumeration value="Finalizada"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="evaluaciones">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="evaluacion" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="evaluacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="instrumento" type="xs:string"/>
+                <xs:element name="convocatoria" type="xs:string"/>
+                <xs:element name="nota" type="notaEvaluacion"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+            <xs:attribute name="matriculaRef" type="xs:IDREF" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="notaEvaluacion">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="10"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
